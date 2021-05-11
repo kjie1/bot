@@ -1,0 +1,226 @@
+*{
+    margin:0;
+    padding:0;
+}
+.wrap{
+    width:600px;
+    /* border:1px solid black; */
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    border-radius:10px;
+    resize: both;
+    overflow:hidden;
+}
+img{
+    width:3rem;
+    height:3rem;
+    border-radius: 50%;
+    /* object-fit: cover; */
+}
+.header-name{
+    height:60px;
+    background-image: linear-gradient(to right,#333,#111,#ccc);
+    text-align: center;
+    color:#fff;
+    line-height:60px;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    display: flex;
+    justify-content: center;
+    /* background-position:-100 center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    transition:all 2s; */
+}
+/* .header-name:hover{
+    background-position:center center;
+} */
+.header-name span{
+    font-size:1rem;
+    /* font-weight: bold; */
+    text-shadow:4px 0px 10px #eee;
+    margin-left: 1.5rem;
+    animation:jumping .7s linear alternate infinite;
+}
+
+@keyframes jumping {
+    /* 0%{
+        transform:translateY(0);
+    }
+    100%{
+        transform:translateY(-20px);
+    } */
+    0%{
+        font-size:2rem;
+        text-shadow:4px 0px 10px #eee;
+
+    }
+    100%{
+        font-size:1rem;
+        text-shadow:4px 0px 10px #eee;
+
+    }
+  
+}
+
+.header-name span:nth-of-type(1){
+    animation-delay: .0s;
+}
+.header-name span:nth-of-type(2){
+    animation-delay: .25s;
+    
+}
+.header-name span:nth-of-type(3){
+    animation-delay: .5s;
+    
+}
+.header-name span:nth-of-type(4){
+    animation-delay: .75s;
+    
+}
+.header-name span:nth-of-type(5){
+    animation-delay: 1s;
+
+}
+#logo{
+    animation:logo 4s alternate infinite;
+    width:-10%;
+}
+@keyframes logo{
+    0%{
+        transform:translateX(-150px);
+    }
+    100%{
+        transform:translateX(0px)
+    }
+}
+
+.content{
+    height:calc(100vh - 110px);
+    background-image: url(../images/268232.jpg);
+    /* background-position:650px; */
+    background-repeat: no-repeat;
+    background-size:cover;
+    transition:all 2s ease-in;
+    /* display: flex; */
+    overflow-y:scroll;
+    animation:con 15s alternate infinite;
+}
+@keyframes con{
+    0%{
+        background-image: url(../images/book.jpg);
+        background-size: cover;
+        background-position: center;
+
+    }
+    33.3%{
+        background-image: url(../images/jianpan.jpg);
+        background-size: cover;
+        background-position: center;
+
+    }
+    66.6%{
+        background-image: url(../images/whatyou.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    100%{
+        background-image: url(../images/268232.jpg);
+        background-size: cover;
+        background-position: center;
+
+
+    }
+}
+
+/* .content:hover{
+    background-image: url(../images/268232.jpg);
+    background-size:cover;
+    background-position: center;
+} */
+
+.mine{
+    float:right;
+    width:60%;
+    margin:5px;
+}
+.robot{
+    float:left;
+    width:60%;
+    margin:5px;
+}
+.clearfix::after{
+    content:"";
+    clear: both;
+    display: block;
+}
+.mine .avatar{
+    float:right;
+}
+.mine .text{
+    float:right;
+    background:greenyellow;
+}
+.robot .avatar{
+    float: left;
+}
+.robot .text{
+    float:left;
+    background:#fff;
+}
+
+.text{
+    max-width: 70%;
+    margin:10px 10px;
+    line-height:30px;
+    padding:0 10px;
+    border-radius: 10px;
+    position:relative;
+    word-break: break-all;
+}
+.text::after{
+    content:"";
+    display: block;;
+    width:0;
+    height:0;
+    border:5px solid transparent;
+    
+    position:absolute;
+    
+}
+.mine .text::after{
+    border-left-color: greenyellow;
+    right:-10px;
+    top:10px;
+}
+.robot .text::after{
+    border-right-color:#fff;
+    left:-10px;
+    top:10px;
+}
+.footer{
+    height:50px;
+    /* border:1px solid black; */
+    background:#bbb;
+    text-align: center; 
+    line-height:50px;
+}
+.footer #message{
+    width: 80%;
+    height: 30px;
+    outline: none;
+    border: none;
+}
+#send{
+    padding: 5px 20px;
+    outline: none;
+    /* border: none; */
+    vertical-align: middle;
+    /* background-color: blue; */
+    /* color: #fff; */
+    border-radius: 5px;
+    width:auto;
+}
+
+
